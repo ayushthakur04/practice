@@ -1,0 +1,12 @@
+SinglyLinkedListNode *temp=llist;
+SinglyLinkedListNode *p=llist->next;
+for(int i=0;i<position-1;i++){
+    temp=temp->next;
+    p=p->next;
+}
+temp->next=p->next;
+free(p);
+return llist;
+
+
+but it not worked on position=0
