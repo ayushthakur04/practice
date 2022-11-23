@@ -1,0 +1,74 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define MAX 4 
+class Queue{
+    private:
+    int top=-1;
+    int count=0;
+    int front=-1;
+    int st[MAX];
+    
+    public:
+    void insert(int data);
+    void deletion();
+    void print();
+    
+};
+
+
+void Queue::insert(int data){
+    if(top==MAX-1){
+        cout<<"queue overflow"<<"\n";
+    }
+    
+    top=top+1;
+    st[top]=data;
+}
+
+void Queue::deletion(){
+    if(top==-1){
+        cout<<"Queue underflow"<<"\n";
+    }
+    
+    for(int i=0;i<top;i++){
+        st[i]=st[i+1];
+    }
+    count++;
+}
+
+
+void Queue::print(){
+    
+    for(int i=0;i<=(top-count);i++){
+        cout<<st[i]<<"\n";
+    }
+}
+
+int main(){
+    Queue st ;
+    
+    st.insert(40);
+    st.insert(34);
+    st.insert(78);
+    st.insert(56);
+    st.insert(90);
+    st.print();
+    st.deletion();
+    st.print();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
