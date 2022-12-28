@@ -1,0 +1,93 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define MAX 4
+class Queue{
+    private:
+    int top=-1;
+    int count=0;
+    int front=-1;
+    int st[MAX];
+    
+    public:
+    void insertion(int data);
+    void deletion();
+    void print();
+    
+};
+
+
+
+
+void Queue::insertion(int data){
+    if(top==MAX-1){
+        cout<<"Queue overflow"<<endl;
+    }
+    
+    else{
+        top=top+1;
+        st[top]=data;
+    }
+}
+
+
+void Queue::deletion(){
+    if(top==-1){
+        cout<<"Queue underflow"<<endl;
+        
+    }
+    
+    for(int i=0;i<top;i++){
+        st[i]=st[i+1];
+        
+    }
+    count++;
+}
+
+void Queue::print(){
+    for(int i=0;i<=(top-count);i++){
+        cout<<st[i]<<endl;
+    }
+}
+    
+    
+    
+int main(){
+    Queue st;
+    int n,data;
+    while(1){
+        cout<<"1. insert"<<endl;
+        cout<<"2. deletion"<<endl;
+        cout<<"3. print"<<endl;
+        cout<<"4. exit"<<endl;
+        cin>>n;
+        switch(n){
+            case 1:{
+                cout<<"enter the element : ";
+                cin>>data;
+                st.insertion(data);
+            }
+            break;
+            case 2:{
+                st.deletion();
+                cout<<"element is deleted";
+                
+            }
+            break;
+            case 3:{
+                cout<<"Elements are : "<<endl;
+                st.print();
+            }
+            break;
+            case 4:{
+                exit(1);
+            }
+            break;
+            default:{
+                cout<<"ERROR";
+                
+            }
+        }    
+    }
+    return 0;
+    
+}
