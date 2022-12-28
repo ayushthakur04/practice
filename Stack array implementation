@@ -1,0 +1,102 @@
+#include<bits/stdc++.h>
+using namespace std;
+# define MAX 1000
+
+class Stack{
+    public:
+    int top=-1;
+    int st[MAX];
+    
+    
+    void push(int data);
+    void pop();
+    void print();
+};
+
+void Stack::push(int data){
+    if(top==MAX-1){
+       cout<<"STACK OVERFLOW";
+    }
+    else {
+        top=top+1;
+        st[top]=data;
+    }
+}
+
+void Stack::pop(){
+    if(top==-1){
+        cout<<"STACK UNDERFLOW";
+    }
+    
+    else{
+        int X=st[top--];
+    }
+}
+
+void Stack::print(){
+    for(int i=0;i<=top;i++){
+        cout<<st[i];
+    }
+}
+
+int main(){
+    Stack st;
+    int data,n;
+    while(1){
+         cout<<"1. INSERT"<<endl;
+        cout<<"2. DELETION"<<endl;
+        cout<<"3. PRINT"<<endl;
+        cout<<"4. EXIT"<<endl;
+        cin>>n;
+        switch(n){
+            case 1:{
+                cout<<"enter elements : ";
+                cin>>data;
+                st.push( data);
+            }
+            break;
+            case 2: {
+                st.pop();
+                cout<<"front element is removed";
+            
+            }
+            break;
+            case 3: {
+                cout<<"elements are :"<<"\n";
+                st.print();
+            }
+            break;
+            case 4: {
+                exit(1);
+            }
+            default:{
+                cout<<"ERROR!!";
+            }
+        }
+        
+    }
+    return 0;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
