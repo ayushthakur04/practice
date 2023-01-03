@@ -1,0 +1,25 @@
+int getSizeOfLinkedList(Node *head){
+	int c=0;
+	Node* ptr=head;
+	while(ptr!=NULL){
+		ptr=ptr->next;
+		c++;
+	}
+	return c;
+}
+ 
+/**
+ * getKthNodeOfLinkedList will take head  of linkedList and an positive interger k in input and 
+ * it's will return kth node (1 based counting)
+ * */
+ 
+Node* getKthNodeOfLinkedList(Node *head, int k){
+	int count=1;
+	Node* ptr=head;
+	while(count<k){
+		ptr=ptr->next;
+		count++;
+	}
+	head=ptr;
+	return head;
+}
