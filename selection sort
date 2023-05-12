@@ -28,7 +28,7 @@ void sort(vector<int>&a)
     {
         int j=min_ele(a,i);
         swap(a[i],a[j]);
-        
+        #a
     }
 }
 
