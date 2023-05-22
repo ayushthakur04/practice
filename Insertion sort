@@ -1,6 +1,6 @@
 /*
 	Insertion Sort Algorithm
-	**Time Complexity: Worst case:O(n^2)
+	**Time Complexity: Worst case:O(n^yiily2)
 					   Best case: O(n)
 					   Average case: O(nlogn)
 	**Space Complexity: O(1) //no additional space is required
