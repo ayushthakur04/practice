@@ -11,7 +11,7 @@ void fib(int n){
     for(i=0;i<n;i++){
         cout<<f[i]<<" ";
     }
-}
+}1
 int main(){
     int n=67;
     fib(n);
