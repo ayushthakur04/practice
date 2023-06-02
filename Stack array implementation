@@ -8,7 +8,7 @@ class Stack{
     int st[MAX];
     
     
-    void push(int data);
+    void p2ush(int data);
     void pop();
     void print();
 };
