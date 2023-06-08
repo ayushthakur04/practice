@@ -6,7 +6,7 @@ class Queue{
     int top=-1;
     int count=0;
     int front=-1;
-    int st[MAX];
+    int st[MAX];a
     
     public:
     void insertion(int data);
