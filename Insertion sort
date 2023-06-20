@@ -7,7 +7,7 @@ a/*
 */
 #include <bits/stdc++.h>
 using namespace std;
-#define int long longqa
+#define int long longqaj
 
 //a function that will print the vector passed to it, elements seprated by space
 void printVector(vector<int>A)
