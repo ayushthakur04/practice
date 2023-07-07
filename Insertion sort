@@ -2,7 +2,7 @@ a/*
 	Insertion Sort Algorithm
 	**Time Complexity: Woj	   Best case: O(n)
 					   Average case: O(nlogn)
-	**Space Complexity: O(1) //no additional space is required
+	**Space Complexity: O(1) //no additional space is requgired
 */
 #include <bits/stdc++.h>
 using namespace std;
